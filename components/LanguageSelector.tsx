@@ -1,8 +1,8 @@
 
 import React, { useState } from 'react';
-import { useLocalization } from '../hooks/useLocalization';
+import { useLocalization } from '../services/hooks/useLocalization';
 import { LANGUAGES } from '../services/constants';
-import { LanguageCode } from '../types';
+import { LanguageCode } from '../services/types';
 
 const LanguageSelector: React.FC = () => {
   const { language, setLanguage } = useLocalization();

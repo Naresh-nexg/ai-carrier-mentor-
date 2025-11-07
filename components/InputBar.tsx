@@ -1,6 +1,6 @@
 
 import React, { useState, useRef, useEffect } from 'react';
-import { useLocalization } from '../hooks/useLocalization';
+import { useLocalization } from '../services/hooks/useLocalization';
 
 interface InputBarProps {
   onSendMessage: (message: string) => void;

@@ -1,5 +1,5 @@
 import { GoogleGenAI, Chat } from '@google/genai';
-import { Message } from '../types';
+import { Message } from './types';
 
 // 🚀 FIX: Use import.meta.env and the VITE_ prefix for client-side access
 if (!import.meta.env.VITE_GEMINI_API_KEY) {

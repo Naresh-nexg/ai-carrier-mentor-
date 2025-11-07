@@ -1,6 +1,6 @@
 
 import React, { useRef, useEffect } from 'react';
-import { Message as MessageType } from '../types';
+import { Message as MessageType } from '../services/types';
 import Message from './Message';
 import LoadingSpinner from './LoadingSpinner';
 

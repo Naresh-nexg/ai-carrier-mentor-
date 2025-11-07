@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { Message as MessageType } from '../types';
+import { Message as MessageType } from '../services/types';
 
 interface MessageProps {
   message: MessageType;

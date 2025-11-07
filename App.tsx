@@ -1,12 +1,11 @@
-
 import React, { useState, useEffect, useCallback } from 'react';
-import { Message } from './types';
-import { useLocalization } from './hooks/useLocalization';
+import { Message } from './services/types';
+import { useLocalization } from './services/src/hooks/useLocalization';
 import Header from './components/Header';
 import ChatWindow from './components/ChatWindow';
 import InputBar from './components/InputBar';
-import { generateResponse, startChat } from './services/geminiService';
-import { LANGUAGES } from './services/constants';
+import { generateResponse, startChat } from '/workspaces/ai-carrier-mentor-/services/geminiService.ts';
+import { LANGUAGES } from '/workspaces/ai-carrier-mentor-/services/constants.ts'; // <-- FIX: Changed import path from './services/constants' to './constants'
 
 const App: React.FC = () => {
   const { t, language } = useLocalization();
@@ -15,6 +14,7 @@ const App: React.FC = () => {
   const [isChatInitialized, setIsChatInitialized] = useState(false);
 
   useEffect(() => {
+    // Initial chat setup and system instruction update whenever language changes
     const currentLanguageName = LANGUAGES.find(l => l.code === language)?.name || 'English';
     startChat(currentLanguageName);
     const initialMessage: Message = { role: 'model', text: t('greeting') };

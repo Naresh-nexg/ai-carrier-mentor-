@@ -1,5 +1,5 @@
 
-import { Language, LanguageCode } from '../types';
+import { Language, LanguageCode } from './types';
 
 export const LANGUAGES: Language[] = [
   { code: 'en', name: 'English' },

@@ -1,7 +1,7 @@
 
 import React from 'react';
 import LanguageSelector from './LanguageSelector';
-import { useLocalization } from '../hooks/useLocalization';
+import { useLocalization } from '../services/hooks/useLocalization';
 
 const Header: React.FC = () => {
   const { t } = useLocalization();
