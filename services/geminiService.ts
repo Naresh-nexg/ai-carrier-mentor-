@@ -1,10 +1,13 @@
 import { GoogleGenAI, Chat } from '@google/genai';
 import { Message } from '../types';
 
-// Fix: The API key should be obtained directly from process.env.API_KEY as per guidelines.
-// The check for API_KEY is also removed as its presence should be assumed.
-const ai = new GoogleGenAI({ apiKey: process.env.API_KEY });
+// 🚀 FIX: Use import.meta.env and the VITE_ prefix for client-side access
+if (!import.meta.env.VITE_GEMINI_API_KEY) {
+    // This check also enforces the VITE_ prefix requirement
+    throw new Error("VITE_GEMINI_API_KEY environment variable is not set.");
+}
 
+const ai = new GoogleGenAI({ apiKey: import.meta.env.VITE_GEMINI_API_KEY });
 let chat: Chat | null = null;
 
 const getSystemInstruction = (languageName: string) => `

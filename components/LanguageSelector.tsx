@@ -1,7 +1,7 @@
 
 import React, { useState } from 'react';
 import { useLocalization } from '../hooks/useLocalization';
-import { LANGUAGES } from '../constants';
+import { LANGUAGES } from '../services/constants';
 import { LanguageCode } from '../types';
 
 const LanguageSelector: React.FC = () => {

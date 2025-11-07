@@ -1,7 +1,7 @@
 // Fix: Import 'React' to be able to use React.createElement.
 import React, { createContext, useContext, useState, ReactNode, useCallback } from 'react';
 import { LanguageCode } from '../types';
-import { TRANSLATIONS } from '../constants';
+import { TRANSLATIONS } from '../services/constants';
 
 interface LocalizationContextType {
   language: LanguageCode;

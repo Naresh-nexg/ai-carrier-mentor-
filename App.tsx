@@ -6,7 +6,7 @@ import Header from './components/Header';
 import ChatWindow from './components/ChatWindow';
 import InputBar from './components/InputBar';
 import { generateResponse, startChat } from './services/geminiService';
-import { LANGUAGES } from './constants';
+import { LANGUAGES } from './services/constants';
 
 const App: React.FC = () => {
   const { t, language } = useLocalization();
